@@ -23,12 +23,22 @@ export class ThemeService {
     toggleTheme() {
         const newTheme = !this._isDarkTheme.value;
         this._isDarkTheme.next(newTheme);
-        localStorage.setItem(THEME_KEY, newTheme.toString());
 
         if (newTheme) {
             document.body.classList.add('dark-theme');
+            document.body.classList.add('transition-light-to-dark');
+            setTimeout(() => {
+                document.body.classList.remove('transition-light-to-dark');
+            }, 500);
         } else {
             document.body.classList.remove('dark-theme');
+            document.body.classList.add('transition-dark-to-light');
+            setTimeout(() => {
+                document.body.classList.remove('transition-dark-to-light');
+            }, 500);
         }
+
+        localStorage.setItem('isDarkTheme', newTheme.toString());
     }
+
 }

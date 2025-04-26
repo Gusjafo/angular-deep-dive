@@ -20,12 +20,17 @@ import { AsyncPipe, NgIf } from '@angular/common';
 })
 export class ToolbarComponent {
     isDarkTheme$;
+    rotating = false;
 
     constructor(private themeService: ThemeService) {
         this.isDarkTheme$ = this.themeService.isDarkTheme$;
     }
 
     toggleTheme() {
+        this.rotating = true;
+        setTimeout(() => {
+            this.rotating = false;
+        }, 1500); 
         this.themeService.toggleTheme();
     }
 

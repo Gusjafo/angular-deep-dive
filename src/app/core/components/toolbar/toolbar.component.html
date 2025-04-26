@@ -8,8 +8,10 @@
 
     <button mat-icon-button (click)="toggleTheme()">
         <ng-container *ngIf="isDarkTheme$ | async as isDarkTheme">
-            <span *ngIf="isDarkTheme">☀️</span>
-            <span *ngIf="!isDarkTheme">🌙</span>
+            <span [class.rotate-icon]="rotating">
+                <span *ngIf="isDarkTheme">☀️</span>
+                <span *ngIf="!isDarkTheme">🌙</span>
+            </span>
         </ng-container>
     </button>
 

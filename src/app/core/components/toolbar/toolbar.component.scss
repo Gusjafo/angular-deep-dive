@@ -10,3 +10,23 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+mat-toolbar {
+    button {
+        color: white;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-icon {
+    animation: rotate 0.5s ease forwards;
+}
