@@ -1,4 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    mat-toolbar {
+        background: #1f1f1f;
+        color: #ffffff;
+    }
+
+    table {
+        background: #1e1e1e;
+        color: #ffffff;
+    }
+
+    mat-form-field {
+        color: #ffffff;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: #888;
+        border-color: #888;
+    }
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #000;
+}

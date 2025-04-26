@@ -6,8 +6,11 @@
     <button mat-button [routerLink]="['/products']">Productos</button>
     <button mat-button [routerLink]="['/products/create']">Agregar</button>
 
-    <!-- Botón para futuro Toggle Dark/Light Theme -->
-    <button mat-icon-button>
-        🌓
+    <button mat-icon-button (click)="toggleTheme()">
+        <ng-container *ngIf="isDarkTheme$ | async as isDarkTheme">
+            <span *ngIf="isDarkTheme">☀️</span>
+            <span *ngIf="!isDarkTheme">🌙</span>
+        </ng-container>
     </button>
+
 </mat-toolbar>
