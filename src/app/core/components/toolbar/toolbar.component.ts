@@ -3,7 +3,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { ThemeService } from '@core/services/theme.service';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe, CommonModule, NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-toolbar',
@@ -14,6 +14,7 @@ import { AsyncPipe, NgIf } from '@angular/common';
         RouterModule,
         AsyncPipe,
         NgIf,
+        CommonModule
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss'
