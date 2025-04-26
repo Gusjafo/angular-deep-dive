@@ -1,0 +1,27 @@
+.list-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.custom-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mat-header-cell,
+.mat-cell {
+    padding: 16px;
+}
+
+h2 {
+    margin: 0;
+}
