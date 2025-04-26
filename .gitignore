@@ -9,6 +9,7 @@ vscode
 *.code-workspace.local.*
 /vscode
 .vscode/*
+.vscode/
 
 # Compiled output
 /dist
