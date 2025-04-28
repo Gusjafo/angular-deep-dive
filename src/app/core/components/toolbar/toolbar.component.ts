@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { ThemeService } from '@core/services/theme.service';
 import { AsyncPipe, CommonModule, NgIf } from '@angular/common';
@@ -14,7 +15,8 @@ import { AsyncPipe, CommonModule, NgIf } from '@angular/common';
         RouterModule,
         AsyncPipe,
         NgIf,
-        CommonModule
+        CommonModule,
+        MatIconModule,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss'
